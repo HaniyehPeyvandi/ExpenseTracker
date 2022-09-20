@@ -1,0 +1,23 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  width:22rem;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.topSection{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.resultSection{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
