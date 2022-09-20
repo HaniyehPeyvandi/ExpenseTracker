@@ -27,3 +27,18 @@
   font-weight: bold;
   color: green;
 }
+
+.btn{
+  cursor: pointer;
+  outline: none;
+  border: 1px solid #0f766e;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: #fff;
+  color: #0f766e;
+}
+
+.btnCancel{
+  color: #b91c1c;
+  border: 1px solid #b91c1c;
+}

@@ -9,7 +9,7 @@ const Overview = ({ expense, income, addTransaction }) => {
     <>
       <div className={styles.topSection}>
         <p>Balance: {income - expense}</p>
-        <button
+        <button className={`${styles.btn} ${isShow && styles.btnCancel}`}
           onClick={() => {
             setIsShow((prevState) => !prevState);
           }}
