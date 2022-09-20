@@ -10,3 +10,20 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.expenseBox{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  width: 135px;
+  height: 60px;
+}
+
+.expenseBox span{
+  font-weight: bold;
+  color: green;
+}
