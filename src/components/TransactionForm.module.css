@@ -1,0 +1,39 @@
+.btn{
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #0f766e;
+  color: #fff;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  min-height: 170px;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.form input{
+  border:1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 12px;
+  outline: none;
+}
+
+.radioBox{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.radioBox input[type="radio"]{
+  margin-left: 10px;
+}
+
+.radioBox label{
+  font-size: 14px;
+  margin-left: 3px;
+}

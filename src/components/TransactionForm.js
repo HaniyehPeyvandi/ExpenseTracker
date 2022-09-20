@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from './TransactionForm.module.css';
 
 const TransactionForm = ({addTransaction}) => {
   const [formValues, setFormValues] = useState({
@@ -24,7 +25,7 @@ const TransactionForm = ({addTransaction}) => {
   }
 
   return (
-    <form onSubmit={submitHandler}>
+    <form onSubmit={submitHandler} className={styles.form}>
       <input
         type="number"
         placeholder="Amount"
@@ -39,7 +40,7 @@ const TransactionForm = ({addTransaction}) => {
         onChange={changeHandler}
         value={formValues.desc}
       />
-      <div>
+      <div className={styles.radioBox}>
         <input
           type="radio"
           name="type"
@@ -59,7 +60,7 @@ const TransactionForm = ({addTransaction}) => {
         />
         <label htmlFor="income">Income</label>
       </div>
-      <button type="submit">Add Transaction</button>
+      <button type="submit" className={styles.btn}>Add Transaction</button>
     </form>
   );
 };
