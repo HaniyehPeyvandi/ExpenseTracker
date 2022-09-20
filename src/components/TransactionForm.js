@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const TransactionForm = () => {
+const TransactionForm = ({addTransaction}) => {
   const [formValues, setFormValues] = useState({
     amount: 0,
     desc: "",
@@ -11,8 +11,20 @@ const TransactionForm = () => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value });
   };
 
+  const submitHandler = (e) => {
+    e.preventDefault();
+
+    if(formValues.desc === "" || formValues.amount === ""){
+      alert("enter form values!");
+      return;
+    }
+
+    addTransaction(formValues);
+    setFormValues({amount:0, desc:"", type:"expense"});
+  }
+
   return (
-    <form>
+    <form onSubmit={submitHandler}>
       <input
         type="number"
         placeholder="Amount"

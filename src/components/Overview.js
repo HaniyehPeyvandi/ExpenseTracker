@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from "./Overview.module.css";
 import TransactionForm from "./TransactionForm";
 
-const Overview = ({ expense, income }) => {
+const Overview = ({ expense, income, addTransaction }) => {
   const [isShow, setIsShow] = useState(false);
 
   return (
@@ -17,7 +17,7 @@ const Overview = ({ expense, income }) => {
           {isShow ? "CANCEL" : "ADD"}
         </button>
       </div>
-      {isShow && <TransactionForm/>}
+      {isShow && <TransactionForm addTransaction={addTransaction}/>}
       <div className={styles.resultSection}>
         <div>Expense {expense}</div>
         <div>Income {income}</div>
