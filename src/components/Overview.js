@@ -17,7 +17,7 @@ const Overview = ({ expense, income, addTransaction }) => {
           {isShow ? "CANCEL" : "ADD"}
         </button>
       </div>
-      {isShow && <TransactionForm addTransaction={addTransaction} />}
+      {isShow && <TransactionForm addTransaction={addTransaction} setIsShow={setIsShow}/>}
       <div className={styles.resultSection}>
         <div className={styles.expenseBox}>
           Expense <span style={{ color: "red" }}>{expense} $</span>

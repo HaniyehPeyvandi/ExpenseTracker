@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from './TransactionForm.module.css';
 
-const TransactionForm = ({addTransaction}) => {
+const TransactionForm = ({addTransaction, setIsShow}) => {
   const [formValues, setFormValues] = useState({
     amount: 0,
     desc: "",
@@ -22,6 +22,7 @@ const TransactionForm = ({addTransaction}) => {
 
     addTransaction(formValues);
     setFormValues({amount:0, desc:"", type:"expense"});
+    setIsShow(false);
   }
 
   return (
