@@ -8,7 +8,7 @@ const Overview = ({ expense, income, addTransaction }) => {
   return (
     <>
       <div className={styles.topSection}>
-        <p>Balance: {income - expense}</p>
+        <p>Balance: $ {income - expense}</p>
         <button className={`${styles.btn} ${isShow && styles.btnCancel}`}
           onClick={() => {
             setIsShow((prevState) => !prevState);
@@ -20,10 +20,10 @@ const Overview = ({ expense, income, addTransaction }) => {
       {isShow && <TransactionForm addTransaction={addTransaction} setIsShow={setIsShow}/>}
       <div className={styles.resultSection}>
         <div className={styles.expenseBox}>
-          Expense <span style={{ color: "red" }}>{expense} $</span>
+          Expense <span style={{ color: "red" }}>$ {expense}</span>
         </div>
         <div className={styles.expenseBox}>
-          Income <span>{income} $</span>
+          Income <span>$ {income}</span>
         </div>
       </div>
     </>
